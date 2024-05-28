@@ -1,20 +1,13 @@
 package ex04;
 
-import ex04.teacher.HtmlTeacher;
-import ex04.teacher.JavaTeacher;
-import ex04.teacher.PythonTeacher;
-import ex04.teacher.Teacher;
-
+/**
+ * 상황 : 만보기 라이브러리를 만드는 개발자, 만보기 메서드를 사용하는 프론트 개발자
+ * 문제 : 만보기 개발자가 일이 늦어서 30일 걸리고, 나는 10일내로 개발해야 한다.
+ * 1. 인터페이스 구현(메서드 이름 통일) - 만보기(인터페이스)
+ */
 public class App {
     public static void main(String[] args) {
-        Teacher jt = new JavaTeacher();
-        Teacher pt = new PythonTeacher();
-        Teacher ht = new HtmlTeacher();
-
-        jt.수업하기();
-        System.out.println();
-        pt.수업하기();
-        System.out.println();
-        ht.수업하기();
+        MeterService ms = new MeterService(new RealMeter());
+        ms.render();
     }
 }

@@ -5,6 +5,7 @@ import ex08.push.pub.LotteMart;
 import ex08.push.pub.Mart;
 import ex08.push.sub.Cus1;
 import ex08.push.sub.Cus2;
+import ex08.push.sub.Customer;
 
 public class App {
     public static void main(String[] args) {
@@ -12,8 +13,8 @@ public class App {
         // 1. Bean 로드
         Mart lotteMart = new LotteMart();
         Mart eMart = new EMart();
-        Cus1 cus1 = new Cus1();
-        Cus2 cus2 = new Cus2();
+        Customer cus1 = new Cus1();
+        Customer cus2 = new Cus2();
 
         // 2. 구독
         lotteMart.add(cus1);

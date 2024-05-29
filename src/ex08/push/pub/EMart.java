@@ -5,7 +5,7 @@ import ex08.push.sub.Customer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LotteMart implements Mart {
+public class EMart implements Mart {
 
     // 구독자 명단
     private List<Customer> customerList = new ArrayList<>();
@@ -25,7 +25,7 @@ public class LotteMart implements Mart {
     // 상품을 받음(출판)
     @Override
     public void received() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 15; i++) {
             System.out.println(".");
             try {
                 Thread.sleep(1000);
@@ -34,7 +34,7 @@ public class LotteMart implements Mart {
             }
         }
         // ....
-        notify("Lotte : 바나나");
+        notify("EMart : 딸기");
     }
 
     // 알림

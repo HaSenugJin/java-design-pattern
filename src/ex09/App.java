@@ -1,13 +1,23 @@
 package ex09;
 
+import ex09.student.HomeworkDelegator;
+import ex09.student.HomeworkType;
+
+/**
+ * 델리게이트
+ * 개념 : 객체가 자신이 직접
+ */
 public class App {
     public static void main(String[] args) {
-        Printer printer = new FilePrinter();
-        Printer stringPrinter = new StringPrinter();
-        Delegator delegator = new Delegator(printer);
-        Delegator string = new Delegator(stringPrinter);
+        HomeworkDelegator hd = new HomeworkDelegator();
 
-        delegator.printMessage("안녕하세요1");
-        string.printMessage("안녕하세요2");
+        // 1. 수학
+        hd.delegateHomework(HomeworkType.MATH);
+
+        // 2. 과학
+        hd.delegateHomework(HomeworkType.SCIENCE);
+
+        // 3. 역사
+        hd.delegateHomework(HomeworkType.HISTORY);
     }
 }
